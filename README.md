@@ -5,7 +5,18 @@
 
 ---
 
-## 🚀 Key Features & Enterprise Modules
+## 1. Project Overview
+Indian steel manufacturers (SAIL, Tata Steel, JSW, JSPL, RINL/Vizag Steel) import high volumes of bulk raw materials (Coking Coal, PCI Coal, Limestone) across international maritime routes to Indian East Coast ports (**Paradip, Visakhapatnam, Dhamra, Haldia, Krishnapatnam**). 
+
+This platform operates fully over **secure HTTPS**:
+1. **AI Forward Freight Rate Forecaster:** Predicts dry bulk ocean freight rates 15 to 90 days ahead using Baltic Dry Index (BDI), Capesize/Panamax sub-indices, Singapore VLSFO bunker fuel prices, and seasonality.
+2. **Vessel Chartering Optimizer:** Recommends optimal vessel classes (**Capesize 160k DWT, Panamax 75k DWT, Supramax 55k DWT**) while strictly enforcing port draft limits.
+3. **Demurrage & Landed Cost Ledger:** Computes demurrage risk exposure, bunker fuel surcharges, and advises whether to lock in a **Period/Time Charter** or procure on the **Spot Market**.
+4. **Interactive Dashboard:** Modern React + Tailwind CSS interface featuring interactive Recharts forward curves, port draft clearance matrices, and maritime corridor intelligence.
+
+---
+
+## 2. Key Features & Enterprise Modules
 
 1. **AI Forward Freight Rate Forecaster**  
    Predicts 15-to-90-day dry bulk ocean freight rates using the Baltic Dry Index (BDI), bunker fuel prices, and seasonal indices.
@@ -24,31 +35,9 @@
 
 ---
 
-## 📂 Directory Structure
+## 3. How to Run in VS Code (HTTPS)
 
-freight-optimizer/
-├── backend/
-│   ├── certs/                      # SSL Certificate & Private Key
-│   ├── data/                       # Historical freight CSV & dataset generator
-│   ├── models/                     # Trained ML Random Forest forecaster (.pkl)
-│   ├── optimizer/                  # Draft constraints & charter optimization logic
-│   ├── main.py                     # FastAPI application & REST endpoints
-│   └── requirements.txt            # Python dependencies
-│
-├── frontend/
-│   ├── src/                        # React executive dashboard & live AIS map components
-│   ├── package.json                # Node dependencies & scripts
-│   └── vite.config.js              # Vite configuration with HTTPS support
-│
-├── start_all.bat                   # One-click launcher for HTTPS backend & frontend
-└── README.md
-
-
-
-
-
-
-
-
-
-
+### Quick Start (One-Click)
+Double-click `start_all.bat` or run in terminal:
+```powershell
+.\start_all.bat
