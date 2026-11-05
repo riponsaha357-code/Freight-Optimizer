@@ -5,6 +5,13 @@
 
 ---
 
+## 🖼️ Platform UI Preview
+<p align="center">
+  <img src="assets/dashboard-preview.png" alt="Navi-Steel Freight AI Portal" width="100%">
+</p>
+
+---
+
 ## 1. Project Overview
 Indian steel manufacturers (SAIL, Tata Steel, JSW, JSPL, RINL/Vizag Steel) import high volumes of bulk raw materials (Coking Coal, PCI Coal, Limestone) across international maritime routes to Indian East Coast ports (**Paradip, Visakhapatnam, Dhamra, Haldia, Krishnapatnam**). 
 
@@ -41,9 +48,3 @@ This platform operates fully over **secure HTTPS**:
 Double-click `start_all.bat` or run in terminal:
 ```powershell
 .\start_all.bat
-
----
-
-## 4. Images 
-
-<img width="1826" height="888" alt="Screenshot 2026-11-05 112631" src="https://github.com/user-attachments/assets/1105d969-bd71-4b71-ba4e-2734e0a5eda1" />
