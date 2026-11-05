@@ -7,9 +7,9 @@
 
 
 ## 🖼️ Platform UI Preview
-<p align="center">
-  <img src="assets/Loginpage-preview.png" alt="Navi-Steel Freight AI Portal" width="100%">
-</p>
+
+### 🏠 Login Page
+<img width="1907" height="833" alt="image" src="assets/Loginpage-preview.png" />
 
 ---
 
