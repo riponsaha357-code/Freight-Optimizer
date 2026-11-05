@@ -9,6 +9,7 @@
 
 ### 🏠 Login Page
 <img width="1907" height="833" alt="image" src="assets/login.png" />
+
 ---
 
 ## 1. Project Overview
@@ -47,3 +48,4 @@ This platform operates fully over **secure HTTPS**:
 Double-click `start_all.bat` or run in terminal:
 ```powershell
 .\start_all.bat
+```

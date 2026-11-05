@@ -460,3 +460,13 @@ if os.path.isdir(_DIST):
             return FileResponse(target)
 
         return FileResponse(os.path.join(_DIST, "index.html"))
+
+
+if __name__ == "__main__":
+    import uvicorn
+    cert_file = os.path.join(os.path.dirname(__file__), "certs", "cert.pem")
+    key_file = os.path.join(os.path.dirname(__file__), "certs", "key.pem")
+    ssl_kwargs = {}
+    if os.path.exists(cert_file) and os.path.exists(key_file):
+        ssl_kwargs = {"ssl_certfile": cert_file, "ssl_keyfile": key_file}
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True, **ssl_kwargs)

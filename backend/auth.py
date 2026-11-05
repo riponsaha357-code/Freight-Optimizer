@@ -1,5 +1,6 @@
 import os
 import hashlib
+import json
 from datetime import datetime, timedelta, timezone
 from typing import Optional
 
@@ -56,7 +57,7 @@ def get_user(email: str) -> Optional[dict]:
     return USERS_DB.get(email_clean)
 
 def save_user(user_data: dict):
-    """Persist user record into MongoDB and update local dictionary cache."""
+    """Persist user record into MongoDB and update local memory cache."""
     email = user_data["email"].lower().strip()
     USERS_DB[email] = user_data
     if is_mongo_online and users_col is not None:
@@ -66,7 +67,7 @@ def save_user(user_data: dict):
             print(f"MongoDB write warning: {e}")
 
 def reset_db() -> dict:
-    """Reset database to default institutional demo accounts."""
+    """Reset database to default institutional demo accounts and official users."""
     global USERS_DB
     USERS_DB.clear()
     default_users = {
@@ -97,6 +98,15 @@ def reset_db() -> dict:
             "avatar": "VM",
             "is_demo": True,
         },
+        "riponsaha357@gmail.com": {
+            "email": "riponsaha357@gmail.com",
+            "hashed_password": hash_password("steel123"),
+            "name": "Ripon Saha",
+            "role": "Chief Logistics Officer",
+            "organization": "Ministry of Steel Operations",
+            "avatar": "RS",
+            "is_demo": False,
+        },
     }
     for email, udata in default_users.items():
         save_user(udata)
@@ -104,7 +114,7 @@ def reset_db() -> dict:
     return {
         "status": "success", 
         "database_mode": "MongoDB" if is_mongo_online else "In-Memory Store",
-        "message": f"User database reset successfully. Active DB: {'MongoDB' if is_mongo_online else 'In-Memory Store'}."
+        "message": f"User database initialized successfully. Active DB: {'MongoDB' if is_mongo_online else 'In-Memory Store'}."
     }
 
 def hash_password(password: str) -> str:

@@ -29,9 +29,6 @@ export default defineConfig({
                 changeOrigin: true,
                 secure: false, // Accepts self-signed certificates on local backend
                 ws: true,
-                // Rewrites /api/auth/token to /auth/token for FastAPI/Node routes
-                // Remove 'rewrite' below ONLY if your backend route explicitly starts with /api
-                rewrite: (path) => path.replace(/^\/api/, ''),
             },
         },
     },

@@ -55,8 +55,8 @@ export default function Login({ initialTab = 'login' }) {
       localStorage.setItem('navi_steel_user', JSON.stringify(res.data.user));
       navigate('/dashboard');
     } catch (err) {
-      if (!err.response) {
-        setError('Backend server offline. Please launch backend or run start_all.bat.');
+      if (!err.response || err.response.status >= 500) {
+        setError('Backend server offline or unreachable on port 8000. Please launch start_all.bat.');
       } else {
         setError(err.response?.data?.detail || 'Authentication failed. Invalid email or password.');
       }
@@ -100,8 +100,8 @@ export default function Login({ initialTab = 'login' }) {
         setError('Registration succeeded but no session token returned.');
       }
     } catch (err) {
-      if (!err.response) {
-        setError('Backend server offline. Please launch backend or run start_all.bat.');
+      if (!err.response || err.response.status >= 500) {
+        setError('Backend server offline or unreachable on port 8000. Please launch start_all.bat.');
       } else {
         const detailMsg = err.response?.data?.detail || '';
         if (
