@@ -9,7 +9,7 @@
 ## 🖼️ Platform UI Preview
 
 ### 🏠 Login Page
-<img width="1907" height="833" alt="image" src="D:\All Projects\freight-optimizer\assetsassets/login.png" />
+<img width="1907" height="833" alt="image" src="assets/login.png" />
 ---
 
 ## 1. Project Overview
