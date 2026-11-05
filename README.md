@@ -42,3 +42,13 @@ freight-optimizer/
 │
 ├── start_all.bat                   # One-click launcher for HTTPS backend & frontend
 └── README.md
+
+
+
+
+
+
+
+
+
+
