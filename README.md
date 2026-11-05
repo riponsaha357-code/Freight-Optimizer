@@ -41,3 +41,9 @@ This platform operates fully over **secure HTTPS**:
 Double-click `start_all.bat` or run in terminal:
 ```powershell
 .\start_all.bat
+
+---
+
+## 4. Images 
+
+<img width="1826" height="888" alt="Screenshot 2026-11-05 112631" src="https://github.com/user-attachments/assets/1105d969-bd71-4b71-ba4e-2734e0a5eda1" />
