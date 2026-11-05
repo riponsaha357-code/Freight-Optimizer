@@ -9,8 +9,7 @@
 ## 🖼️ Platform UI Preview
 
 ### 🏠 Login Page
-<img width="1907" height="833" alt="image" src="assets/Loginpage-preview.png" />
-
+<img width="1907" height="833" alt="image" src="assets/login.png" />
 ---
 
 ## 1. Project Overview
